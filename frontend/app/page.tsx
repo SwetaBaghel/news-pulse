@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 
-const API = 'http://localhost:5000';
+const API = 'https://news-pulse-dr54.onrender.com';
 const COLORS = ['#6366f1','#8b5cf6','#ec4899','#f59e0b','#10b981','#3b82f6','#ef4444','#14b8a6'];
 
 interface Cluster { id: number; label: string; start: string; end: string; article_count: number; size: number; }
