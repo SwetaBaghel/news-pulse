@@ -86,7 +86,7 @@ export default function Home() {
               <YAxis type="category" dataKey="label" width={155} tick={{ fill: '#cbd5e1', fontSize: 12 }} />
               <Tooltip
                 contentStyle={{ background: '#1e293b', border: 'none', borderRadius: 8 }}
-                formatter={(val: number) => [`${val} articles`, 'Count']}
+                formatter={(val: unknown) => [`${val} articles`, 'Count']}
               />
               <Bar dataKey="article_count" radius={[0, 6, 6, 0]} onClick={(d) => openCluster(d.id)}>
                 {timeline.map((_, i) => (
