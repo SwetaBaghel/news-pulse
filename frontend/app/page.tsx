@@ -88,7 +88,7 @@ export default function Home() {
                 contentStyle={{ background: '#1e293b', border: 'none', borderRadius: 8 }}
                 formatter={(val: unknown) => [`${val} articles`, 'Count']}
               />
-              <Bar dataKey="article_count" radius={[0, 6, 6, 0]} onClick={(d) => openCluster(d.id)}>
+              <Bar dataKey="article_count" radius={[0, 6, 6, 0]} onClick={(d) => d.id !== undefined && openCluster(Number(d.id))}>
                 {timeline.map((_, i) => (
                   <Cell key={i} fill={COLORS[i % COLORS.length]} cursor="pointer" />
                 ))}
